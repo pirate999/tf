@@ -32,8 +32,7 @@ with tf.Session() as sess:
     for i in range(1000):
         #raw data and label
         batch_xs, batch_ys = minist.train.next_batch(100)
-        y_tmp = sess.run([train_step, y], feed_dict={x: batch_xs, y_: batch_ys})
-        print(list(y_tmp[1]))
+        sess.run([train_step, y], feed_dict={x: batch_xs, y_: batch_ys})
        
     
     #tf.argmax(A, 1)
