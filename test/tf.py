@@ -44,7 +44,8 @@ with tf.Session() as sess:
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
     
     ll = sess.run([accuracy, correct_prediction], feed_dict={x: minist.test.images, y_: minist.test.labels})
-    print(ll[1].shape)
+    print(ll[0])
+   
     
 
 
